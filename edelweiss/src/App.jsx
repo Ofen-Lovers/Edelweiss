@@ -1,19 +1,13 @@
-import 'boostrap/dist/css/bootstrap.min.css';
 import './App.css';
-
+import Header from './components/header/header'; // Import the Header component
+import React from 'react';
 
 function App() {
   return (
     <>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-<h1 className='text-center p-5' style={{fontSize:'70px', fontWeight:'bold'}}> Build a <span className='text-p'></span> </h1>
-<br/> By <span className='text-danger'>Edelweiss</span>
+      <Header />
     </>
-  )
+  );
 }
 
 export default App;

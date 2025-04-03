@@ -1,0 +1,56 @@
+header {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 20px 0px;
+}
+
+header .headSearch {
+    width: 90%;
+    height: 50px; 
+    border: 1px solid #ff2b8e;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+header .headSearch .selecrDrop {
+    width: 40%;
+    padding: 0px 10px;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+}
+
+header .headSearch .selecrDrop:after {
+    content: '';
+    position: absolute; 
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border-left: 1px solid #ff2b8e;
+    height: 20px;
+}
+
+header .headSearch .search {
+    width: 70%;
+    padding-left: 10px;
+    position: relative;
+}
+
+header .headSearch .search input {
+    width: 85%;
+    height: 50%;
+    border: none;
+    outline: none
+    !important; font-size: 16px;
+}
+
+.logo {
+    width: 90%;
+}
+
+header .headSearch .search .searchIcon {
+    position: absolute;
+    right: 5px;
+    color: #ff2b8e;
+}
