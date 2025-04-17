@@ -1,44 +1,57 @@
 import React, { useState } from 'react';
 import './select.css';
 import 'bootstrap/dist/css/bootstrap.min.css';  
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
 
-const Select = () => {
 
-    const [isOpenSelect, setOpenSelect] = useState(false);
+
+const Select = ({data, placeholder, icon}) => {
+
+    const [isOpenSelect, setisOpenSelect] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(0);
+    const [selectedItem, setselectedItem] = useState(placeholder);
 
     const OpenSelect = () => {
-        setOpenSelect(!isOpenSelect);
+        setisOpenSelect(!isOpenSelect);
     }
 
-    const closeSelect = (index) => {
+    const closeSelect = (index, name) => {
         setSelectedIndex(index);
+        setisOpenSelect(false);
+        setselectedItem(name);
     }
     
 
     return (
+        <ClickAwayListener onClickAway={()=>setisOpenSelect(false)}>
         <div className='selectDropWrapper cursor position-relative'>
-            <span className='openSelect' onClick={OpenSelect}>All Categories</span>
+            {icon}
+            <span className='openSelect' onClick={OpenSelect}>{selectedItem} <KeyboardArrowDownIcon className='arrow'/></span>
             {
                 isOpenSelect===true && 
                 <div className='selectDrop'>
                 <div className='searchField'>
-                    <input type="text"/>  
+                    <input type="text" placeholder='Search here...'/>  
                 </div>
-
                 <ul className='searchResults'>
-                        <li onClick={()=>closeSelect(0)}>All Categories</li>
-                        <li onClick={()=>closeSelect(1)}>Stuff Toys</li>
-                        <li onClick={()=>closeSelect(2)}>Boquetes</li>
-                        <li onClick={()=>closeSelect(3)}>Crochets</li>
-                        <li onClick={()=>closeSelect(4)}>Accesories</li>
-                        <li onClick={()=>closeSelect(5)}>Letter</li>
-                        <li onClick={()=>closeSelect(6)}>Gift Box</li>
+                <li key={0} onClick={()=>closeSelect(0,placeholder)} className={`${selectedIndex===0 ? 'active' :''}`}>{placeholder}</li>
+
+
+                    {
+                        data.map((item, index) => {
+                            return (
+                                <li key={index+1} onClick={()=>closeSelect(index+1,item)} className={`${selectedIndex===index+1 ? 'active' :''}`}>{item}</li>
+                            )
+                        })
+                    }
+
                 </ul>
             </div>
 
             }
         </div>
+        </ClickAwayListener>
     )
 }
 
