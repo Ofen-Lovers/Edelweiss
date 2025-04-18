@@ -100,3 +100,34 @@ header .headerTabs li span.badge{
 header .headerTabs li span .compare-icon{
     margin-right: 5px;
 }
+
+.dropdownMenu {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    width: 130px;
+    height: auto;
+    background-color: white;   
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(5, 5, 4, 0.1);
+}
+
+.dropdownMenu li {
+    width: 130px;   
+    list-style: none;
+}
+
+.dropdownMenu li button {
+    font-size: 11px;
+    color: #000000;
+    width: 100% !important;
+    text-align: left;
+    justify-content: flex-start;
+    text-transform: capitalize !important;
+    padding: 5px 10px;
+}
+
+.dropdownMenu li button svg{
+    opacity: 0.6;
+    margin-right: 5px;
+}
