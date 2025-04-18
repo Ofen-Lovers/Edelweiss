@@ -9,7 +9,8 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import CompareArrowsOutlinedIcon from '@mui/icons-material/CompareArrowsOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+ 
 const Header = () => {
   const [categories, setcategories] = useState([
     "Stuff Toys",
@@ -94,6 +95,11 @@ const Header = () => {
                     <span><ShoppingCartOutlinedIcon className="compare-icon"/>
                     <span className="badge rounded-circle">1</span>
                     Cart</span>
+                  </li>
+                  <li className="list-inline-item">
+                    <span><AccountCircleOutlinedIcon className="compare-icon"/>
+                    <span className="badge rounded-circle"></span>
+                    Account</span>
                   </li>
                 </ul>
               </div>
