@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import SearchIcon from "@mui/icons-material/Search";
 import Select from "../selectDrop/select";
 import axios from "axios";
+
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import CompareArrowsOutlinedIcon from "@mui/icons-material/CompareArrowsOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
@@ -17,6 +18,11 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import Button from '@mui/material/Button';
+
+import ClickAwayListener from '@mui/material/ClickAwayListener';
+
+import Nav from './nav/nav';
+
 
 const Header = () => {
 
@@ -91,7 +97,7 @@ const Header = () => {
                     }
                   />
                 </div>
-
+                <ClickAwayListener onClickAway={()=>setisOpenDropdown(false)}>
                 <ul className="list list-inline mb-0 headerTabs">
                   <li className="list-inline-item">
                     <span>
@@ -123,23 +129,24 @@ const Header = () => {
                     {
                       isOpenDropdown !== false &&
                       <ul className="dropdownMenu">
-                      <li><Button className="align-items-center"><AccountCircleIcon/>My Account</Button></li>
-                      <li><Button><DeliveryDiningIcon/>Order Tracking</Button></li>
-                      <li><Button><ConfirmationNumberIcon/>Voucher</Button></li>
-                      <li><Button><FavoriteIcon/>Favorite</Button></li>
-                      <li><Button><SettingsIcon/>Setting</Button></li>
-                      <li><Button><ExitToAppIcon/>Sign out</Button></li>
+                      <li><Button className="align-items-center"><AccountCircleIcon className="aIcon"/>My Account</Button></li>
+                      <li><Button><DeliveryDiningIcon className="aIcon"/>Order Tracking</Button></li>
+                      <li><Button><ConfirmationNumberIcon className="aIcon"/>Voucher</Button></li>
+                      <li><Button><FavoriteIcon className="aIcon"/>Favorite</Button></li>
+                      <li><Button><SettingsIcon className="aIcon"/>Setting</Button></li>
+                      <li><Button><ExitToAppIcon className="aIcon"/>Sign out</Button></li>
                     </ul>
-
                     }
-
-                  </li>
+                  </li>  
                 </ul> 
+                </ClickAwayListener>
               </div>
             </div>
           </div>
         </div>
       </header>
+
+      <Nav/>
     </>
   );
 };
