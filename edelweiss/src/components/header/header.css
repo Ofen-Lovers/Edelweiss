@@ -17,7 +17,7 @@ header .headSearch {
 header .headSearch .selectDropWrapper {
     width: 40%;
     padding: 0px 10px;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 500;
     position: relative;
 }
@@ -98,5 +98,61 @@ header .headerTabs li span.badge{
 }
 
 header .headerTabs li span .compare-icon{
+    margin-right: 8px;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    width: 130px;
+    height: auto;
+    background-color: white;   
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px rgba(5, 5, 4, 0.1), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 0 30px;
+    z-index: 100;
+}
+
+.dropdownMenu li {
+    width: 130px;   
+    list-style: none;
+}
+
+.dropdownMenu li button {
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.7); /* Text color (default) */
+    width: 100% !important;
+    text-align: left;
+    justify-content: flex-start;
+    text-transform: capitalize !important;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdownMenu li button svg {
     margin-right: 5px;
+    color: #ff2b8e; 
+    transition: all 0.3s ease;
+}
+
+.dropdownMenu li button:hover {
+    background-color: #ff2b8e; 
+}
+
+.dropdownMenu li button:hover {
+    color: white !important; 
+}
+
+.dropdownMenu li button:hover svg {
+    color: white !important; 
+    opacity: 1;
+}
+.headerTabs li span:hover .compare-icon {
+    color: #ff2b8e; 
 }

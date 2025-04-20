@@ -1,3 +1,5 @@
+
+
 * {
   margin: 0px;
   padding: 0px;
@@ -8,7 +10,18 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+#root{
+  zoom: 100%;
+}
+
 .container-fluid {
   padding: 0px 45px;
 }
 
+.bg-g, .bg-success {
+  background-color: #ff2b8e;
+}
+
+.text-g {
+  color: #ff2b8e;
+}

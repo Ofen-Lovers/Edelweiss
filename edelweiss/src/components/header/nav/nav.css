@@ -1,0 +1,170 @@
+/* Main Navigation Container */
+.nav {
+    width: 100%;
+    height: 60px;
+    margin: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Categories Button */
+.nav .catTab {
+    padding: 8px 20px !important;
+    color: white !important;
+    background-color: #ff2b8e;   
+    font-size: 12px !important;
+    text-transform: capitalize !important;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.nav .catTab svg {
+    color: white !important;
+    margin-right: 5px;
+}
+
+/* Main Navigation Links */
+.nav nav ul li {
+    position: relative;
+}
+
+.nav nav ul li button {
+    text-transform: capitalize !important;
+    color: inherit !important;
+    padding: 5px 10px !important;
+    height: 56px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav nav ul li button a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7) !important;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav nav ul li button svg {
+    color: #ff2b8e !important;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects for Main Nav */
+.nav nav ul li button:hover a {
+    color: #ff2b8e !important;
+}
+
+.nav nav ul li button:hover svg {
+    color: #ff2b8e !important;
+}
+
+/* Dropdown Menu */
+.nav nav .dropdown_menu {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 180px;
+    height: auto;
+    background: white;
+    box-shadow: 0px 3px 6px rgba(5, 5, 4, 0.1), 0 3px 6px rgba(0, 0, 0, 0.23);
+    z-index: 1000;
+    display: none;
+}
+
+.nav nav ul li:hover .dropdown_menu {
+    display: block;
+}
+
+.nav nav .dropdown_menu li {
+    width: 180px;
+    list-style: none;
+    margin: 0 !important;
+}
+
+.nav nav .dropdown_menu li button {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.7) !important;
+    width: 100% !important;
+    height: 36px !important;
+    text-align: left;
+    margin-left: -32px;
+    justify-content: flex-start;
+    padding: 10px 15px !important;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    background: none;
+}
+
+.nav nav .dropdown_menu li button svg {
+    color: #ff2b8e !important;
+    margin-right: 8px;
+    opacity: 0.8;
+    font-size: 25px;
+    text-align: center;
+}
+
+/* Hover Effects for Dropdown */
+.nav nav .dropdown_menu li button:hover {
+    background-color: #ff2b8e;
+    color: white !important;
+}
+
+.nav nav .dropdown_menu li button:hover svg {
+    color: white !important;
+    opacity: 1;
+}
+
+/* Phone Number Section */
+.nav .part3 .phnNo {
+    display: flex;
+    align-items: center;
+}
+
+.nav .part3 .phnNo svg {
+    font-size: 40px !important;
+    padding-right: 10px !important;
+    color: #ff2b8e !important;
+    opacity: 0.8;
+}
+
+.nav .part3 .phnNo .info {
+    margin-left: 12px;
+}
+
+.nav .part3 .phnNo h3 {
+    font-size: 22px !important;
+    line-height: 1.2 !important;
+    color: #ff2b8e;
+    margin-bottom: 2px;
+}
+
+.nav .part3 .phnNo p {
+    font-size: 10px !important;
+    opacity: 0.8;
+    margin: 0;
+    color: #666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .nav {
+        height: auto;
+        padding: 10px 0;
+    }
+    
+    .nav .catTab,
+    .nav nav ul li button {
+        height: auto;
+        padding: 8px 12px !important;
+    }
+    
+    .nav nav ul li button a {
+        font-size: 14px;
+    }
+}
