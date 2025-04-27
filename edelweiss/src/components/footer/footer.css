@@ -1,0 +1,9 @@
+  /* Footer Styles */
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid #eaeaea;
+    margin-top: 1rem;
+  }
