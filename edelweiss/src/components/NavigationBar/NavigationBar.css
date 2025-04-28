@@ -1,0 +1,161 @@
+.navbar-container {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    z-index: 1000;
+    top: 0;        /* Stick it to the top of the viewport */
+    left: 0;       /* Align it to the left edge */
+    right: 0;      /* Align it to the right edge */
+  }
+  
+  .navbar-upper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #f0f0f0;
+
+  }
+  
+  .logo-container {
+    /* Add flex-shrink to prevent logo from affecting other elements */
+    flex-shrink: 0;
+    width: 120px; /* Fixed width for logo container */
+    height: 50px; /* Fixed height for logo container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo {
+    /* Use object-fit to maintain aspect ratio */
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  
+  .category-selector {
+    padding: 0.5rem 1rem;
+    background-color: #f9f9f9;
+    border-right: 1px solid #e0e0e0;
+    color: #666;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+  }
+  
+  .search-button {
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: #999;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .action-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 0.75rem;
+    padding: 0;
+  }
+  
+  .action-button span {
+    margin-top: 0.25rem;
+  }
+  
+  .navbar-lower {
+    display: flex;
+    padding: 0.75rem 2rem;
+    align-items: center;
+  }
+  
+  .browse-button {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .nav-links {
+    display: flex;
+    margin-left: 2rem;
+    gap: 2rem;
+  }
+  
+  .nav-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link.promo {
+    color: #ff4081;
+  }
+  
+  .nav-link.promo::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #ff4081;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9 9-6 6v4h4l6-6'/%3E%3Cpath d='m16 10 2-2'/%3E%3Cpath d='M13 7a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z'/%3E%3Cpath d='M19 11a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z'/%3E%3Cpath d='M2 12h4'/%3E%3Cpath d='M9.5 4.5 12 2l2.5 2.5'/%3E%3Cpath d='M18 2h4v4'/%3E%3C/svg%3E");
+    margin-right: 0.5rem;
+  }
+  
+  .nav-link.home::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #333;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/%3E%3Cpolyline points='9 22 9 12 15 12 15 22'/%3E%3C/svg%3E");
+    margin-right: 0.5rem;
+  }
+  
+  .nav-link.shop::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #333;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z'/%3E%3Cpath d='M3 6h18'/%3E%3Cpath d='M16 10a4 4 0 0 1-8 0'/%3E%3C/svg%3E");
+    margin-right: 0.5rem;
+  }
